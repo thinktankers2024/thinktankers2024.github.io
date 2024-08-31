@@ -5,6 +5,6 @@ feature_text: |
   ## Kaushal - Start Upskilling Today
 ---
 
-:Get Started Now:
+Get Started Now
 
 [![Click Here](/Button1_42px.png)](/evaluation.html)

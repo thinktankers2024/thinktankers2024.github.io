@@ -26,7 +26,7 @@ baseurl: ''
 title: 'My website'
 description: 'This is my new website'
 permalink: pretty
-logo: "https://www.sih.gov.in/img1/logo/SIH_logo_2024_horizontal.png"
+logo: "/SIH_logo_2024.png"
 
 # Pagination
 paginate: 5

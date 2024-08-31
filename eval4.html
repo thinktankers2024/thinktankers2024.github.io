@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Evaluation</title>
+    <style>
+        /* Same CSS as before */
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; color: #333; }
+        .title-bar { background-color: white; padding: 20px; display: flex; align-items: center; justify-content: center; position: relative; color: black; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        .title-bar img { width: 40px; height: 40px; position: absolute; left: 20px; }
+        .title-bar h1 { font-size: 28px; margin: 0; }
+        .container { display: flex; max-width: 1200px; margin: 40px auto; background: white; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); overflow: hidden; }
+        .left, .right { flex: 1; padding: 40px; box-sizing: border-box; }
+        .left { border-right: 1px solid #eaeaea; }
+        h2 { font-size: 24px; margin-bottom: 20px; color: black; }
+        select, input[type="text"] { width: 100%; padding: 15px; margin: 15px 0; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; color: #333; background-color: white; transition: all 0.3s ease; }
+        select:focus, input[type="text"]:focus { border-color: black; outline: none; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        .button { background-color: black; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; transition: all 0.3s ease; margin-top: 20px; }
+        .button:hover { background-color: #333; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); }
+        @media (max-width: 768px) { .container { flex-direction: column; } .left { border-right: none; border-bottom: 1px solid #eaeaea; } }
+    </style>
+</head>
+<body>
+
+    <!-- Title bar -->
+    <div class="title-bar">
+        <a href="https://www.google.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Google_icon.svg/512px-Google_icon.svg.png" alt="Google">
+        </a>
+        <h1>Calculate your Score Now</h1>
+    </div>
+
+    <!-- Body container with two sections -->
+    <div class="container">
+        <!-- Left section with dropdowns -->
+        <div class="left">
+            <h2>Questionnaire</h2>
+            <form id="questionnaire-form">
+                <label for="job-field">Job Field</label>
+                <select id="job-field" name="jobField">
+                    <option value="">Select Job Field</option>
+                    <option value="IT">IT</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Education">Education</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="skills">Skills Acquired</label>
+                <select id="skills" name="skills">
+                    <option value="">Select Skills</option>
+                </select>
+
+                <label for="experience">Job Experience (in years)</label>
+                <select id="experience" name="experience">
+                    <option value="0-1">0-1 years</option>
+                    <option value="1-3">1-3 years</option>
+                    <option value="3-5">3-5 years</option>
+                    <option value="5+">5+ years</option>
+                </select>
+
+                <button type="submit" class="button">Evaluate</button>
+            </form>
+        </div>
+
+        <!-- Right section with input box and evaluate button -->
+        <div class="right">
+            <h2>LinkedIn Profile</h2>
+            <form id="linkedin-form">
+                <label for="linkedin">LinkedIn Profile Link</label>
+                <input type="text" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/your-profile/">
+
+                <!-- Evaluate button for LinkedIn -->
+                <button type="submit" class="button">Evaluate</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const jobFieldSelect = document.getElementById('job-field');
+        const skillsSelect = document.getElementById('skills');
+
+        const skillsOptions = {
+            IT: ["Programming", "Cybersecurity", "Web Development", "Data Science"],
+            Finance: ["Accounting", "Financial Analysis", "Investment Banking", "Taxation"],
+            Healthcare: ["Nursing", "Pharmacy", "Surgery", "Medical Assistance"],
+            Education: ["Teaching", "Curriculum Design", "Educational Psychology", "Administration"],
+            Other: ["Project Management", "Sales", "Marketing", "Operations"]
+        };
+
+        jobFieldSelect.addEventListener('change', function() {
+            const selectedJobField = jobFieldSelect.value;
+            const options = skillsOptions[selectedJobField] || [];
+
+            // Clear previous options
+            skillsSelect.innerHTML = '<option value="">Select Skills</option>';
+
+            // Add new options based on the selected job field
+            options.forEach(skill => {
+                const optionElement = document.createElement('option');
+                optionElement.value = skill;
+                optionElement.textContent = skill;
+                skillsSelect.appendChild(optionElement);
+            });
+        });
+
+        // Form submission for the questionnaire
+        document.getElementById("questionnaire-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Questionnaire Evaluate clicked!");
+        });
+
+        // Form submission for LinkedIn Profile
+        document.getElementById("linkedin-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("LinkedIn Evaluate clicked!");
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to the title */
+.animated-title {
+  animation: slideFadeIn 1.5s ease-out forwards;
+}

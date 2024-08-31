@@ -1,8 +1,8 @@
 ---
-title: Welcome to my website
+title: Know Your Job Readiness
 feature_image: "https://picsum.photos/1300/400?image=989"
 feature_text: |
   ## Add Text
 ---
 
-Text Will be here
+Get the Score by Filling the Form or by using your LinkedIn Profile

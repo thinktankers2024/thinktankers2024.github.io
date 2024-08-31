@@ -5,4 +5,6 @@ feature_text: |
   ## Add Text
 ---
 
-Get the Score by Filling the Form or by using your LinkedIn Profile
+Get Started Now
+
+[![Click Here](https://www.netlify.com/img/deploy/button.svg)](/evaluation.html)

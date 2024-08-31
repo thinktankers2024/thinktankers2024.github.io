@@ -7,4 +7,4 @@ feature_text: |
 
 Get Started Now
 
-[![Click Here](/Button1.png)](/evaluation.html)
+[![Click Here](/Button1_42px.png)](/evaluation.html)

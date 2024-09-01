@@ -36,6 +36,8 @@ paginate_path: blog/page:num
 navigation_header:
 - title: Home
   url: /
+- title: Community
+  url: /
 - title: About Us
   url: /about/
 

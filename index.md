@@ -2,7 +2,7 @@
 title: Know Your Job Readiness
 feature_image: "https://picsum.photos/1300/400?image=989"
 feature_text: |
-  ## Kaushal - Start Upskilling Today
+  ## <span class="animated-title">Kaushal - Start Upskilling Today
 ---
 
 Get Started Now

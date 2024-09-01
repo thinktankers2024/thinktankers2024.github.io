@@ -68,3 +68,11 @@ defaults:
       type: "pages"
     values:
       layout: page # Set the default layout for pages
+
+# Css files for intro page
+
+include:
+  - assets/css/style.css
+
+includes:
+  - head_custom.html

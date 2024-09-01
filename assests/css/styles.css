@@ -12,4 +12,9 @@
 /* Apply animation to the title */
 .animated-title {
   animation: slideFadeIn 1.5s ease-out forwards;
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  padding: 5px 10px; /* Add some padding around the text */
+  border-radius: 5px; /* Optional: Rounds the corners slightly */
+  display: inline-block; /* Ensures the background only covers the text */
 }

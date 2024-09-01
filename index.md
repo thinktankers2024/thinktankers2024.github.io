@@ -1,6 +1,6 @@
 ---
 title: Know Your Job Readiness
-feature_image: "https://images.pexels.com/photos/3374205/pexels-photo-3374205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+feature_image: "https://picsum.photos/1300/400?image=989"
 feature_text: |
   ## <span class="animated-title">Kaushal - Start Upskilling Today</span>
 ---
